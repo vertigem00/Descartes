@@ -1,0 +1,48 @@
+
+
+
+.links-inicio{
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    box-sizing: content-box;
+    height: 100%;
+}
+
+.links-inicio:hover .inicio{
+    color:white;
+}
+
+
+.links-inicio:hover{
+    background-color: rgb(75, 39, 112);
+}
+
+.links-descartes{   
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    box-sizing: content-box;
+    height: 100%;
+}
+
+.links-descartes:hover .o-descartes{
+    color:white;
+}
+
+.links-descartes:hover{
+    background-color: rgb(75, 39, 112);
+}
+
+.links-equipe{ 
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    box-sizing: content-box;
+    height: 100%;
+}
+
+.links-equipe:hover .equipe{
+    color: white;
+}
+
+.links-equipe:hover {
+    background-color: rgb(75, 39, 112);
+}
