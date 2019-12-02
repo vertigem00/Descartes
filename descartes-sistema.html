@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="descartes-css.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+
+        </nav>
+    </header>
+    <div class="navegador-principal">
+        <img src="img/descarteslogo.png" alt="" class="logo">
+        <nav class="menu-ancora">
+            <div class="links-inicio">
+                <a href="#inicio" class="inicio">Início</a>
+            </div>
+            <div class="links-descartes">
+                <a href="#o-descartes" class="o-descartes">O Descartes</a>
+            </div>
+            <div class="links-equipe">
+                <a href="#nossa-equipe" class="equipe">A Equipe</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="fundo_auth" id="auth">
+        <div class="auth">
+            <div class="login">
+                <h2>Login</h2>
+                <div>
+                    E-mail: <br>
+                    <input name="firstname" id="email"><br>
+                    <br>
+                    Senha:<br> 
+                    <input name="lastname" id="senha">
+                    <br>
+                    <button class="button_login" value="submit" onclick="login()">Login</button>
+                    <button class="button_registro" value="submit" onclick="login()">Registre-se</button>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="fundo_auth" id="init">
+            <div class="auth">
+                <div class="login">
+                    <h2>Logout</h2>
+                    <div>
+                        <button class="button_login" value="submit" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="rodape">
+        <a href="#inicio" class="logo-rodape-link">
+            <img src="" alt="" class="logo-rodape">
+        </a>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAmIE4Gdo6j8H6vO4vVQPjr7EyZnT0Xo9Y",
+    authDomain: "descartes-75a5d.firebaseapp.com",
+    databaseURL: "https://descartes-75a5d.firebaseio.com",
+    projectId: "descartes-75a5d",
+    storageBucket: "descartes-75a5d.appspot.com",
+    messagingSenderId: "200263575412",
+    appId: "1:200263575412:web:2c4ffd63865aa3d452ae21"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    function login(){
+    var email = document.getElementById("email");
+    var senha = document.getElementById("senha");
+    firebase.auth().signInWithEmailAndPassword(email.value, senha.value).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+    });
+    console.log("login");
+}
+
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        alert(email);
+        document.getElementById("init").style.display = "block";
+        document.getElementById("auth").style.display = "none";
+
+        // ...
+    } else {
+        // User is signed out.
+        // ...
+        document.getElementById("auth").style.display = "block";
+        document.getElementById("init").style.display = "none";
+
+
+    }
+    });
+    
+    function cadastro(){
+        var email = document.getElementById("email");
+    var senha = document.getElementById("senha");
+        firebase.auth().createUserWithEmailAndPassword(email.value, senha.value).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        });
+    }
+    
+    function logout(){
+        firebase.auth().signOut();
+        console.log("deslogado")
+    }
+    </script>
+</body>
+</html>

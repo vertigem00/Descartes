@@ -19,6 +19,7 @@
     width: 100%;
     height: 7vh;
     background: rgb(242, 106, 33);
+
 }
 
 .cabecalho-nav {
@@ -26,6 +27,7 @@
     float: right;
     color: white;
     margin-right: 20px;
+    margin-top: 1vh;
     width: 12vw;
     display: flex;
     justify-content: space-around;
@@ -354,10 +356,80 @@ a{
     justify-content: space-around;
 }
 
+.fundo_auth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(189, 184, 184);
+}
+.auth {
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
 
 
+.login {
+    background-color: white;
+    width: 25vw;
+    height: 45vh;
+}
+.login div {
+    margin-left: 3vw;
+    margin-top: 3%;
+    font-size: 20px;
+}
+.login h2 {
+    margin-top: 2vh;
+    text-align: center;
+}
+.login input {
+    width: 90%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 
+}
+.registro {
+    width: 25vw;
+    height: 25vw;
+    background-color: blue;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
+}
+.rodape {
+    width: 100%;
+    height: 10.5vh;
+    background-color: rgb(242, 106, 33);
+}
+
+.button_login {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 12px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+}
+.button_registro {
+    background-color: rgb(216, 22, 22);
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
 
 
 

@@ -10,8 +10,8 @@
 <body>
     <header class="cabecalho">
         <nav class="cabecalho-nav">
-            <a class="entrar">Entrar</a>
-            <a class="registrar">Registrar-se</a>
+            <a href="descartes-login.html" class="entrar">Entrar</a>
+            <a href="" class="registrar">Registrar-se</a>
         </nav>
     </header>
     <div class="navegador-principal">
@@ -52,12 +52,12 @@
             <div class="espaco-empresa-coletor">
                 <div class="empresa">
                     <h1 class="empresas-h1">Empresas</h1>
-                    <p class="empresas-texto">Bla´bla bla bla bla bla bla</p>
+                    <p class="empresas-texto">Está a procura de uma solução para o descarte de resíduos de sua empresa?</p>
                     <a href="" class="saiba-mais">Saiba mais</a>
                 </div>
                 <div class="coletor">
-                        <h1 class="coletor-h1">Coletor</h1>
-                        <p class="empresas-texto">Bla´bla bla bla bla bla bla</p>
+                        <h1 class="coletor-h1">Pessoal</h1>
+                        <p class="empresas-texto">Você tem necessidade de materiais para utilizar em seus projetos?</p>
                         <a href="" class="acessar">Acessar o Descartes</a>
                     </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="conectividade">
                 <img src="" alt="" class="img-conectividade">
                 <h1 class="h1-conectividade">Conectividade</h1>
-                <p class="p-conectividade">bla blab lbalblablal</p>
+                <p class="p-conectividade">Buscando não apenas um direcionamento adequado para os resíduos sólidos, nosso projeto visa também fortalecer a conexão da comunidade</p>
             </div>
             <div class="informacao">
                 <img src="" alt="" class="img-informacao">
@@ -166,5 +166,25 @@
             <img src="" alt="" class="logo-rodape">
         </a>
     </footer>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+
+            <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+            apiKey: "AIzaSyAmIE4Gdo6j8H6vO4vVQPjr7EyZnT0Xo9Y",
+            authDomain: "descartes-75a5d.firebaseapp.com",
+            databaseURL: "https://descartes-75a5d.firebaseio.com",
+            projectId: "descartes-75a5d",
+            storageBucket: "descartes-75a5d.appspot.com",
+            messagingSenderId: "200263575412",
+            appId: "1:200263575412:web:2c4ffd63865aa3d452ae21"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            </script>
 </body>
 </html>
