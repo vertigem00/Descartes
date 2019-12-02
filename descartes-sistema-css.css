@@ -1,0 +1,543 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(Nunito/NunitoSans-Black.ttf);
+    src: url(Nunito/NunitoSans-Regular.ttf);
+    src: url(Nunito/NunitoSans-SemiBold.ttf);
+}
+
+.body {
+    width: 100vw;
+    font-family: 'Nunito';
+}
+
+.cabecalho {
+    width: 100%;
+    height: 7vh;
+    background: rgb(242, 106, 33);
+
+}
+
+.cabecalho-nav {
+    padding: 5px;
+    float: right;
+    color: white;
+    margin-right: 20px;
+    margin-top: 1vh;
+    width: 12vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.entrar {
+    padding: 5px;
+}
+
+.registrar {
+    padding: 5px;
+}
+
+.navegador-principal {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.menu-ancora {
+    align-items: center;
+    display: flex;
+    width: 45vw;
+    justify-content: space-around;
+    font-size: 30px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.links-inicio{
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    box-sizing: content-box;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15vw;
+}
+
+.links-inicio:hover .inicio{
+    color:white;
+}
+
+.links-inicio:hover{
+    background-color: rgb(75, 39, 112);
+}
+
+.links-descartes{   
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    box-sizing: content-box;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    width: 15vw;
+    justify-content: space-around;
+}
+
+.links-descartes:hover .o-descartes{
+    color:white;
+}
+
+.links-descartes:hover{
+    background-color: rgb(75, 39, 112);
+}
+
+.links-equipe{ 
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    box-sizing: content-box;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    width: 15vw;
+    justify-content: space-around;
+}
+
+.links-equipe:hover .equipe{
+    color: white;
+}
+
+.links-equipe:hover {
+    background-color: rgb(75, 39, 112);
+}
+
+
+.logo {
+    width: 25vw;
+    padding: 5px 20px 20px 20px;
+}
+
+#inicio{
+    background-image: url(/img/img1.png);
+    background-size: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.conteudo-inicio {
+    margin-top: 10%;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.busca {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.pesquisa {
+    width: 30%;
+    height: 10%;
+}
+
+.espaco-empresa-coletor{
+    margin-top: -150px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.empresa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 46%;
+    height: 80%;
+    background-color: white;
+}
+
+.empresas-h1{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.empresas-texto{
+    width: 100%;
+    text-align: center;
+}
+
+.saiba-mais{
+    color: white;
+    text-align: center;
+    height: 20px;
+    width: 150px;
+    background-color: rgb(75, 39, 112);
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.coletor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 46%;
+    height: 80%;
+    background-color: white;
+}
+
+.coletor-h1{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.coletor-texto{
+    width: 100%;
+    text-align: center;
+}
+
+.acessar{
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    height: 20px;
+    width: 150px;
+    background-color: rgb(75, 39, 112);
+    padding: 10px;
+}
+
+.info{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(242, 106, 33);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+
+#o-descartes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 180vh;
+}
+
+.nossos-servicos{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nosso-servico{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.conectividade{
+    margin-top: -200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+}
+
+.h1-conectividade{
+    width: 100%;
+}
+
+.p-conectividade{
+    width: 100%;
+    text-align: center;
+}
+
+.informacao{
+    margin-top: -200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+}
+
+.h1-informacao{
+    width: 100%;
+}
+
+.p-informacao{
+    width: 100%;
+    text-align: center;
+}
+
+.reutilizacao{
+    margin-top: -200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+}
+
+.h1-reutilizacao{
+    width: 100%
+}
+
+.p-reutilizacao{
+    width: 100%;
+    text-align: center;
+}
+
+.visao-solucao{
+    margin-top: -100px;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.visao{
+    width: 45%;
+    text-align: center;
+}
+
+.p-visao{
+    margin-top: 50px;
+}
+
+.missao{
+    width: 45%;
+    text-align: center;
+}
+
+.p-missao{
+    margin-top: 50px;
+}
+
+#nossa-equipe{
+    margin-top: -300px;
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(242, 106, 33);
+    padding-top: 30px;
+}
+
+.h1-equipe{
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.imgs-equipe{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+}
+
+.fundo_auth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(189, 184, 184);
+}
+.auth {
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.login {
+    background-color: white;
+    width: 25vw;
+    height: 45vh;
+}
+.login div {
+    margin-left: 3vw;
+    margin-top: 3%;
+    font-size: 20px;
+}
+.login h2 {
+    margin-top: 2vh;
+    text-align: center;
+}
+.login input {
+    width: 90%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+.registro {
+    width: 25vw;
+    height: 25vw;
+    background-color: blue;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.rodape {
+    width: 100%;
+    height: 10.5vh;
+    background-color: rgb(242, 106, 33);
+}
+
+.button_login {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 12px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+}
+.button_registro {
+    background-color: rgb(216, 22, 22);
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+
+
+
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    padding: 15px;
+    width: 96%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
