@@ -23,6 +23,7 @@
 }
 
 .cabecalho-nav {
+    font-family: 'Nunito';
     padding: 5px;
     float: right;
     color: white;
@@ -35,6 +36,7 @@
 
 .entrar {
     padding: 5px;
+    color: white;
 }
 
 .registrar {
@@ -42,6 +44,7 @@
 }
 
 .navegador-principal {
+    font-family: 'Nunito';
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -375,7 +378,7 @@ a{
 .login {
     background-color: white;
     width: 25vw;
-    height: 45vh;
+    height: 52vh;
 }
 .login div {
     margin-left: 3vw;
@@ -397,7 +400,6 @@ a{
 .registro {
     width: 25vw;
     height: 25vw;
-    background-color: blue;
     justify-content: space-around;
     flex-wrap: wrap;
 
@@ -481,11 +483,13 @@ a{
   
   /* Add padding to container elements */
   .container {
+    font-family: 'Nunito';
     padding: 16px;
   }
   
   /* The Modal (background) */
   .modal {
+    font-family: 'Nunito';
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -524,7 +528,7 @@ a{
   
   .close:hover,
   .close:focus {
-    color: #f44336;
+    color:  rgb(242, 106, 33);
     cursor: pointer;
   }
   
@@ -541,3 +545,116 @@ a{
        width: 100%;
     }
   }
+
+
+  /* A partir daqui é a sidenav*/
+
+  .sidenav {
+    font-family: 'Nunito';
+    display: none;
+    height: 550px;
+    width: 220px;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: rgb(75, 39, 112);
+  }
+  
+  .grandcontainer {
+    margin-left: 0px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 0px;
+    background-color: #818181;
+    display: flex;
+
+  }
+  
+  .content  {
+      position: relative;
+      width: 90vw;
+      height: 80vh;
+      background-image: url("map.png");
+
+  }
+
+  input[type=text]{
+    width: 80%;
+    height: 0.5%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  .content #desc_mapa {
+
+  }
+
+.inputlocaliza {
+    width: 55%;
+    height: 0.5%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+
+  .localiza {
+      background-color: rgb(36, 186, 171);
+      position: relative;
+      width: 70px;
+      height: 35px;
+      top: -5px;  
+      padding: 0px;
+      border-radius: 10px;
+  }
+
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.containerempresa {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    top: -100px;
+    left: 380px;
+    background-color: wheat;
+}

@@ -10,6 +10,7 @@
     src: url(Nunito/NunitoSans-SemiBold.ttf);
 }
 
+
 .body {
     width: 100vw;
     font-family: 'Nunito';
@@ -22,23 +23,26 @@
 
 }
 
+
 .cabecalho-nav {
     padding: 5px;
     float: right;
     color: white;
     margin-right: 20px;
-    margin-top: 1vh;
-    width: 12vw;
+    width: 15vw;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .entrar {
     padding: 5px;
+    color: white;
 }
 
 .registrar {
     padding: 5px;
+    color: white;
 }
 
 .navegador-principal {
@@ -49,16 +53,34 @@
 }
 
 .menu-ancora {
-    align-items: center;
     display: flex;
-    width: 45vw;
+    width: 50vw;
     justify-content: space-around;
     font-size: 30px;
+    font-family: 'Nunito';
+
 
 }
 
-a{
+
+a:hover{
     text-decoration: none;
+    font-family: 'Nunito';
+}
+
+.p-coletores {
+    font-family: 'Nunito';
+    color: white;
+}
+
+.p-colaboradores {
+    font-family: 'Nunito';
+    color: white
+}
+
+.p-projetos {
+    font-family: 'Nunito';
+    color: white;
 }
 
 .links-inicio{
@@ -80,14 +102,14 @@ a{
     background-color: rgb(75, 39, 112);
 }
 
-.links-descartes{   
+.links-descartes{
     text-decoration: none;
     color: rgb(75, 39, 112);
     box-sizing: content-box;
     height: 100%;
     display:flex;
     align-items: center;
-    width: 15vw;
+    width: 30vw;
     justify-content: space-around;
 }
 
@@ -105,8 +127,8 @@ a{
     box-sizing: content-box;
     height: 100%;
     display:flex;
+    width: 20vw;
     align-items: center;
-    width: 15vw;
     justify-content: space-around;
 }
 
@@ -118,16 +140,40 @@ a{
     background-color: rgb(75, 39, 112);
 }
 
+.links-manual{
+    text-decoration: none;
+    color: rgb(75, 39, 112);
+    text-align: center;
+    height: 100%;
+    width: 35vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.links-manual:hover .manual{
+    color:white;
+}
+
+.links-manual:hover{
+    background-color: rgb(75, 39, 112);
+}
+
+
+
+
+
 
 .logo {
     width: 25vw;
-    padding: 5px 20px 20px 20px;
+    padding: 5px 40px 20px 60px;
 }
 
 #inicio{
-    background-image: url(/img/img1.png);
+    color: gray;
+    background-image: url(./img/img.jpg);
     background-size: 100%;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -135,11 +181,10 @@ a{
 }
 
 .conteudo-inicio {
-    margin-top: 10%;
+    padding-top: 80px;
     width: 70vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .busca {
@@ -151,81 +196,111 @@ a{
 }
 
 .pesquisa {
-    width: 30%;
-    height: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 0px;
+}
+
+.grupo {
+    height: 5px;
+    width: 450px;
+}
+
+.icone-busca {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(75, 39, 112);
+    height: 40px;
+    width: 100px;
+}
+
+.buscar {
+    width: 30px;
+}
+
+.busca-residuo {
+    width: 250px;
+    height: 40px;
+}
+
+.busca-bairros {
+    width: 250px;
+    height: 40px;
 }
 
 .espaco-empresa-coletor{
-    margin-top: -150px;
+    margin-bottom: 80px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
 .empresa{
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 46%;
-    height: 80%;
+    height: 100%;
     background-color: white;
 }
 
 .empresas-h1{
-    margin-top: 50px;
     width: 100%;
     text-align: center;
 }
 
 .empresas-texto{
-    width: 100%;
+    font-family: 'Nunito';
+    width: 70%;
     text-align: center;
+    font-size: 23px;
 }
 
 .saiba-mais{
-    color: white;
     text-align: center;
-    height: 20px;
+    height: 40px;
     width: 150px;
     background-color: rgb(75, 39, 112);
-    margin-top: 50px;
-    padding: 10px;
 }
 
 .coletor {
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 46%;
-    height: 80%;
+    height: 100%;
     background-color: white;
 }
 
 .coletor-h1{
-    margin-top: 50px;
     width: 100%;
     text-align: center;
 }
 
 .coletor-texto{
-    width: 100%;
+    font-family: 'Nunito';
+    width: 80%;
     text-align: center;
+    font-size: 1000px;
 }
 
 .acessar{
-    margin-top: 50px;
     color: white;
     text-align: center;
-    height: 20px;
-    width: 150px;
+    height: 40px;
+    width: 200px;
     background-color: rgb(75, 39, 112);
     padding: 10px;
 }
 
 .info{
     width: 100%;
-    height: 175px;
+    height: 220px;
     background-color: rgb(242, 106, 33);
     display: flex;
     justify-content: space-around;
@@ -264,119 +339,150 @@ a{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 180vh;
+    height: 170vh;
+    background-color: rgb(242, 106, 33);
 }
 
 .nossos-servicos{
-    font-size: 30px;
-    height: 80vh;
+    padding: 50px 50px 50px 50px;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: white;
 }
 
-.nosso-servico{
-    margin-top: 40px;
+.texto-nosso-servico {
+    font-family: 'Nunito';
+    width: 20vw;
+    font-size: 13px;
+}
+
+.nossos-servicos h1 {
+    font-size: 40px; 
+    font-family: 'Nunito';  
+}
+
+.nosso-servico {
+    font-style: italic;
     width: 100%;
     text-align: center;
 }
 
 .conectividade{
-    margin-top: -250px;
+    padding: 10px 40px 10px 40px;
+    box-shadow: gray 5px 5px 5px 5px; 
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    
+    align-items: flex-start;
     text-align: center;
-    width: 25%;
+    width: 20%;
 }
 
-.h1-conectividade{
-    margin-top: -200px;
-    width: 100%;
-}
-
-.p-conectividade{
-    margin-top: -200px;
-    width: 100%;
-    text-align: center;
+.conectividade h1 {   
+    color: rgb(36, 186, 171);
 }
 
 .informacao{
-    margin-top: -250px;
+    box-shadow: gray 5px 5px 5px 5px; 
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    padding: 10px 40px 10px 40px;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
-    width: 25%;
+    width: 20%;
 }
 
-.h1-informacao{
-    margin-top: -200px;
-    width: 100%;
+.informacao h1 { 
+    color: rgb(36, 186, 171);
 }
 
-.p-informacao{
-    margin-top: -200px;
-    width: 100%;
-    text-align: center;
-}
-
-.reutilizacao{
-    margin-top: -230px;
+.reutilizacao {
+    box-shadow: gray 5px 5px 5px 5px; 
+    padding: 10px 40px 10px 40px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
-    width: 25%;
+    width: 20%;
 }
 
-.h1-reutilizacao{
-    margin-top: -100px;
-    width: 100%
-}
-
-.p-reutilizacao{
-    margin-top: -100px;
-    width: 100%;
-    text-align: center;
+.reutilizacao h1 {
+    color: rgb(36, 186, 171);
 }
 
 .visao-solucao{
-    margin-top: 175px;
-    font-size: 30px;
+    background-image: url(./img/img2.jpg);
     width: 100%;
-    height: 250vh;
+    height: 80vh;
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
 
+
+
 .visao{
-    width: 45%;
+    padding: 10px 10px 10px 10px;
+    height: 70%;
+    background-color: white;
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
+}
+
+.nossa-visao{
+    color: rgb(36, 186, 171);
+    font-family: 'Nunito';
+    margin-top: 10px;
+    width: 100%;
 }
 
 .p-visao{
-    margin-top: 50px;
+    width: 70%;
+    margin-top: 10px;
+    font-family: 'Nunito';
 }
 
 .missao{
-    width: 45%;
+    height: 70%;
+    padding: 30px 10px 10px 10px;
+    background-color: white;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
 }
 
+h1 {
+    font-family: 'Nunito';
+}
+.nossa-missao {
+    color: rgb(36, 186, 171);
+    font-family: 'Nunito';
+    margin-top: 10px;
+    width: 100%;
+}
+
 .p-missao{
-    margin-top: 50px;
+    width: 70%;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Nunito';
 }
 
 #nossa-equipe{
     display: flex;
     flex-wrap: wrap;
-    margin-top: -100px;
     width: 100%;
     height: 50vh;
     background-color: rgb(242, 106, 33);
@@ -384,6 +490,9 @@ a{
 }
 
 .h1-equipe{
+    margin-top: 20px;
+    font-style: italic;
+    color: white;
     margin-bottom: 50px;
     font-size: 50px;
     width: 100%;
@@ -392,17 +501,65 @@ a{
 
 .imgs-equipe{
     width: 100%;
+    height: 200px;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
 }
 
-.fundo_auth{
+.membros {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+    font-family: 'Nunito';
+}
+
+.img-shelida {
+    width: 150px;
+    height: 150px;
+}
+
+.p-shelida {
+    width: 150px;
+    height: 150px;
+}
+
+.img-matt {
+    width: 150px;
+    height: 150px;
+}
+
+.img-isys {
+    width: 150px;
+    height: 150px;
+}
+
+.img-ju {
+    width: 150px;
+    height: 150px;
+}
+
+.img-thais {
+    width: 150px;
+    height: 150px;
+}
+
+.img-ale {
+    width: 150px;
+    height: 150px;
+}
+
+.fundo_auth {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(189, 184, 184);
 }
+
 .auth {
     width: 100vw;
     height: 65vh;
@@ -413,40 +570,153 @@ a{
 }
 
 
+
+.fale-conosco {
+    color: rgb(248,203, 79);
+    padding: 20px 20px 00px 20px;
+    height: 70vh;
+    font-family: 'Nunito';
+    
+}
+
+.h1-fale-conosco {
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+}
+
+.contatos1 {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contatos {
+    width: 50%;
+}
+
+.p-nosso-numero {
+    font-size: 30px;
+}
+
+.nosso-email {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nosso-email-info {
+    margin-left: 20px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h1-nosso-email {
+    width: 100%;
+}
+
+.nosso-emaill {
+    width: 65px;
+}
+
+.mande-email {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.h1-mande-email {
+    width: 100%;
+}
+
+.nome-mande-email {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.email-mande-email {
+    width: 100%;
+}
+
+.mensagem-mande-email {
+    width: 100%;
+}
+
+
+.nosso-numero {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.img-nosso-numero{
+    width: 65px;
+}
+
+.nosso-numero-info {
+    margin-left: 20px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botao-mande-email {
+    margin-top: 10px;
+    background-color: rgb(248,203, 79);
+}
+
+.formulario {
+    width: 80%;
+}
+
+::placeholder {
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+
+
+
 .login {
     background-color: white;
     width: 25vw;
     height: 45vh;
 }
+
 .login div {
     margin-left: 3vw;
     margin-top: 3%;
     font-size: 20px;
-}
+} 
+
 .login h2 {
     margin-top: 2vh;
     text-align: center;
 }
+
 .login input {
     width: 90%;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-
 }
+
 .registro {
     width: 25vw;
     height: 25vw;
     background-color: blue;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
+
 .rodape {
     width: 100%;
     height: 10.5vh;
-    background-color: rgb(242, 106, 33);
+    background-color: gray;
 }
 
 .button_login {
@@ -458,6 +728,7 @@ a{
   cursor: pointer;
   width: 90%;
 }
+
 .button_registro {
     background-color: rgb(216, 22, 22);
     color: white;
