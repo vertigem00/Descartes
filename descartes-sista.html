@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="descartes-sistema-css.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a href="" onclick="onclick='logout()'">Log out</a>
+            
+        </nav>
+    </header>
+    <div class="navegador-principal">
+        <img src="img/descarteslogo.png" alt="" class="logo">
+    </div>
+
+    <div class="fundo_auth" id="auth">
+        <div class="auth">
+            <div class="login">
+                <h2>Login</h2>
+                <div>
+                    E-mail: <br>
+                    <input name="firstname" id="email"><br>
+                    <br>
+                    Senha:<br> 
+                    <input name="lastname" id="senha" type="password">
+                    <br>
+                    <button class="button_login" value="submit" onclick="login()">Login</button>
+                    <button class="button_registro" value="submit" onclick="document.getElementById('id01').style.display='block'">Registre-se</button>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fundo_auth" id="init" style="display: none;">
+            <div class="auth">
+                <div class="login">
+                    <h2>Logout</h2>
+                    <div>
+                        
+                        <div class="loader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+            <div class="modal-content">
+              <div class="container">
+                <h1>Cadastro</h1>
+                <p>Preencha o Formulário</p>
+                <hr>
+
+                <label for="email"><b>E-mail</b></label>
+                <input type="text" placeholder="Digite seu e-mail"  id="email2"required>
+          
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Digite sua senha" id="senha2"required>
+          
+                <label for="psw-repeat"><b>Repetir senha</b></label>
+                <input type="password" placeholder="Digite novamente sua senha" name="senha-repeat" required>
+
+                <label ><b>Tipo de Usuário:</b></label>
+
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar usuário
+                </label>
+          
+                <p>Ao criar esta conta você concorda com nosso <a href="#" style="color:dodgerblue">Termo de Privacidade</a>.</p>
+          
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button class="signupbtn" onclick="cadastro()">Cadastrar-se</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        <footer class="rodape">
+        <a href="#inicio" class="logo-rodape-link">
+            <img src="" alt="" class="logo-rodape">
+        </a>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAmIE4Gdo6j8H6vO4vVQPjr7EyZnT0Xo9Y",
+    authDomain: "descartes-75a5d.firebaseapp.com",
+    databaseURL: "https://descartes-75a5d.firebaseio.com",
+    projectId: "descartes-75a5d",
+    storageBucket: "descartes-75a5d.appspot.com",
+    messagingSenderId: "200263575412",
+    appId: "1:200263575412:web:2c4ffd63865aa3d452ae21"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    function login(){
+    var email = document.getElementById("email");
+    var senha = document.getElementById("senha");
+    firebase.auth().signInWithEmailAndPassword(email.value, senha.value).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+    });
+    console.log("login");
+}
+
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+
+        document.getElementById("init").style.display = "block";
+        document.getElementById("auth").style.display = "none";
+        window.location.href = "http://127.0.0.1:5500/Descartes-master/descartes-sistema.html#o-descartes";
+
+        // ...
+    } else {
+        // User is signed out.
+        // ...
+        document.getElementById("auth").style.display = "block";
+        document.getElementById("atualize").style.display = "none";
+        document.getElementById("init").style.display = "none";
+
+
+    }
+    });
+    
+    function cadastro(){
+        var email = document.getElementById("email2");
+        var senha = document.getElementById("senha2");
+        console.log("Usuário cadastrado com sucesso!");
+        firebase.auth().createUserWithEmailAndPassword(email.value, senha.value).catch(function(error) {
+            document.getElementById("init").style.display = "id01";
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+            });
+            document.getElementById('id01').style.display='none';
+    }
+    
+    function logout(){
+        firebase.auth().signOut();
+        console.log("deslogado")
+    }
+    </script>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>

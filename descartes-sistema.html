@@ -4,125 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="descartes-css.css">
+    <link rel="stylesheet" href="descartes-sistema-css.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
     <title>Document</title>
 </head>
 <body>
     <header class="cabecalho">
         <nav class="cabecalho-nav">
-            
+            <a  href="descartes.html" onclick="logout()" class="entrar">Log Out</a>
+
         </nav>
     </header>
     <div class="navegador-principal">
         <img src="img/descarteslogo.png" alt="" class="logo">
         <nav class="menu-ancora">
             <div class="links-inicio">
-                <a href="#inicio" class="inicio">Início</a>
+                <a href="#" onclick="abrir(event, 'home', '');" class="inicio">Home</a>
             </div>
             <div class="links-descartes">
-                <a href="#o-descartes" class="o-descartes">O Descartes</a>
+                <a href="#o-descartes" onclick="abrir(event, 'mapa', 'desc-mapa')" class="o-descartes">Mapa</a>
             </div>
             <div class="links-equipe">
-                <a href="#nossa-equipe" class="equipe">A Equipe</a>
+                <a href="#nossa-equipe" onclick="abrir(event, 'explorar', '')" class="equipe">Explorar</a>
+            </div>
+            <div class="links-equipe">
+                <a href="descartes.html" class="equipe">Sair</a>
             </div>
         </nav>
     </div>
-
-    <div class="fundo_auth" id="auth">
-        <div class="auth">
-            <div class="login">
-                <h2>Login</h2>
-                <div>
-                    E-mail: <br>
-                    <input name="firstname" id="email"><br>
-                    <br>
-                    Senha:<br> 
-                    <input name="lastname" id="senha">
-                    <br>
-                    <button class="button_login" value="submit" onclick="login()">Login</button>
-                    <button class="button_registro" value="submit" onclick="document.getElementById('id01').style.display='block'">Registre-se</button>
-
-                </div>
-                
-            </div>
+    <header class="cabecalho">
+            <nav class="cabecalho-nav">
+                <a  class="entrar">Olá, <b>João!</b></a>
+            </nav>
+        </header>
+    <div class="grandcontainer">
+        <div class="sidenav" id="home" style="display: block;">
+            <a href="">Perfil</a>
+            <a href="">Visão Geral</a>
+            <a href="">Meus Projetos</a>
+            <a href="">Transições</a>
+            <a href="">Empresas Amigas</a>
         </div>
+
+        <div style="color: white;  padding: 10px;" class="sidenav" id="mapa">
+                <h6>O que você procura?</h6>
+                <input class="inputpesquisa" type="text" value="ArtCom"> </input>
+                <h6>Localização:</h6>
+                <form>
+                <input class="inputlocaliza" type="text" value="Quixadá, Ceará"></input>
+            </form style="font-size: 2px">
+                <h6>Area de  alcance:</h6>
+                <input type="range"mm="1" max="25"></input><br>
+                <p style="font-size: 15px;">20 Kilometros <span></span></p><br>
+                <h6>Materiais:</h6>
+                <form style="font-size: 20px;">
+                    <input type="radio" name="material" id="plastico" >Plástico<br>
+                    <input type="radio" name="material" id="papel" > Papel<br>
+                    <input type="radio" name="material" id="plastico" >Aluminío
+
+                </form><br>
+                <button class="localiza" onclick="icon()"> <b>Procurar</b> </button>
+        </div>
+
+        <div class="sidenav" id="explorar">
+                <a href="">Empresas</a>
+                <a href="">Projetos</a>
+        </div>
+
+        <div class="content" id="desc-mapa" style="display: block;">
+                <img src="Icones/icon.png" onclick="modeon()"   style="cursor:pointer; position:relative; top:190px; left: 520px; display: none;" id="icon" lt="">
+                <div class="containerempresa" id="containerempresa" style="display: none; padding: 10px;">
+                <h3>ArtCom</h3>
+            <p>Trabalhamos com papel e recortes de tecido!</p>
+        </div>
+        </div>
+
+        
+        <div class="content" id="desc-explorar" style="display: block;">
+            <img src="Icones/icon.png" onclick="modeon()"   style="cursor:pointer; position:relative; top:190px; left: 520px; display: none;" id="icon" lt="">
+            <div class="containerempresa" id="containerempresa" style="display: none; padding: 10px;">
+            <h3>ArtCom</h3>
+        <p>Trabalhamos com papel e recortes de tecido!</p>
+    </div>
     </div>
 
-        <div class="fundo_auth" id="atualize">
-        <div class="auth">
-            <div class="login">
-                <h2>Preencha suas informações, por favor:</h2>
-                <div>
-                    Nome: <br>
-                    <input name="firstname" id="nomea"><br>
-                    <br>
-                    Número: <br> 
-                    <input name="number" id="celulara">
-                    <br>
-                    <select id="optsel">
-                        <option value="coletor">Coletor</option>
-                        <option value="doador">Doador</option>
-                    </select>
-                    <button class="button_login" value="submit" onclick="login()">Login</button>
-                    <button class="button_registro" value="submit" onclick="document.getElementById('id01').style.display='block'">Registre-se</button>
-
-                </div>
-                
-            </div>
-        </div>
     </div>
+    <footer></footer>
 
-    <div class="fundo_auth" id="init">
-            <div class="auth">
-                <div class="login">
-                    <h2>Logout</h2>
-                    <div>
-                        <button class="button_login" value="submit" onclick="logout()">Logout</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-            <div class="modal-content">
-              <div class="container">
-                <h1>Cadastro</h1>
-                <p>Preencha o Formulário</p>
-                <hr>
 
-                <label for="email"><b>E-mail</b></label>
-                <input type="text" placeholder="Digite seu e-mail"  id="email2"required>
-          
-                <label for="psw"><b>Senha</b></label>
-                <input type="password" placeholder="Digite sua senha" id="senha2"required>
-          
-                <label for="psw-repeat"><b>Repetir senha</b></label>
-                <input type="password" placeholder="Digite novamente sua senha" name="senha-repeat" required>
-
-                <label ><b>Tipo de Usuário:</b></label>
-
-                <label>
-                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar usuário
-                </label>
-          
-                <p>Ao criar esta conta você concorda com nosso <a href="#" style="color:dodgerblue">Termo de Privacidade</a>.</p>
-          
-                <div class="clearfix">
-                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-                  <button class="signupbtn" onclick="cadastro()">Cadastrar-se</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-        <footer class="rodape">
-        <a href="#inicio" class="logo-rodape-link">
-            <img src="" alt="" class="logo-rodape">
-        </a>
-    </footer>
-
+<script src="descartes-js.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 
@@ -166,16 +137,9 @@
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
         var providerData = user.providerData;
-        alert(displayName);
-        if(displayName == null) {
-        document.getElementById("atualize").style.display = "block";
-        document.getElementById("init").style.display = "none";
-        
-        } else {
-            document.getElementById("init").style.display = "block";
-
-        };
+        document.getElementById("init").style.display = "block";
         document.getElementById("auth").style.display = "none";
+        window.location.href = "descartes-sistema.html";
 
         // ...
     } else {
@@ -192,7 +156,7 @@
     function cadastro(){
         var email = document.getElementById("email2");
         var senha = document.getElementById("senha2");
-        console.log(email.value);
+        console.log("Usuário cadastrado com sucesso!");
         firebase.auth().createUserWithEmailAndPassword(email.value, senha.value).catch(function(error) {
             document.getElementById("init").style.display = "id01";
             // Handle Errors here.

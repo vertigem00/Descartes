@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="descartes-sistema-css.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a  class="entrar">Olá, Usuário</a>
+
+        </nav>
+    </header>
+    <div class="navegador-principal">
+        <img src="img/descarteslogo.png" alt="" class="logo">
+        <nav class="menu-ancora">
+            <div class="links-inicio">
+                <a href="#" onclick="abrir(event, 'home');" class="inicio">Home</a>
+            </div>
+            <div class="links-descartes">
+                <a href="#o-descartes" onclick="abrir(event, 'mapa')" class="o-descartes">Mapa</a>
+            </div>
+            <div class="links-equipe">
+                <a href="#nossa-equipe" onclick="abrir(event, 'explorar')" class="equipe">Explorar</a>
+            </div>
+            <div class="links-equipe">
+                <a href="descartes.html" class="equipe">Sair</a>
+            </div>
+        </nav>
+    </div>
+    <header class="cabecalho">
+            <nav class="cabecalho-nav">
+                <a  class="entrar">Olá, Usuário</a>
+            </nav>
+        </header>
+    <div class="grandcontainer">
+        <div class="sidenav" id="home">
+            <a href="">Perfil</a>
+            <a href="">Visão Geral</a>
+            <a href="">Meus Projetos</a>
+            <a href="">Transições</a>
+            <a href="">Empresas Amigas</a>
+        </div>
+
+        <div style="color: white" class="sidenav" id="mapa">
+                <h3>Pesquisar:</h3>
+                <input> </input>
+                <h3>Localização:</h3>
+                <input> </input>
+                Area de  alcance:
+                <h4>Materiais:</h4>
+                <form>
+                    <input type="radio" name="material" id="plastico"> Plástico<br>
+                    <input type="radio" name="material" id="papel"> Papel
+                </form>
+                <a href="">Perfil</a>
+        </div>
+
+        <div class="sidenav" id="explorar">
+                <a href="">Empresas</a>
+                <a href="">Projetos</a>
+        </div>
+
+        <div class="content"></div>
+
+    </div>
+<script src="descartes-js.js"></script>
+</body>
+</html>
